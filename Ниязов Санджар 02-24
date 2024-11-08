@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double a, b, h, c, perimeter, midSegment;
+
+    cout << "Введите длину длинного основания (a): ";
+    cin >> a;
+    cout << "Введите длину короткого основания (b): ";
+    cin >> b;
+    cout << "Введите высоту трапеции (h): ";
+    cin >> h;
+
+    double halfBaseDiff = (a - b) / 2;
+    c = sqrt(halfBaseDiff * halfBaseDiff + h * h);
+    perimeter = a + b + 2 * c;
+    midSegment = h;
+
+    cout << "Периметр трапеции: " << perimeter << endl;
+    cout << "Длина отрезка, соединяющего середины оснований: " << midSegment << endl;
+
+    return 0;
+}
